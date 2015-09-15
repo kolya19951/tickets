@@ -1,0 +1,80 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Документ без названия</title>
+<link rel="stylesheet" type="text/css" href="styles.css">
+<link rel="stylesheet" type="text/css" href="reset.css">
+<script type='text/javascript' src='script.js'></script>
+</head>
+
+<body>
+<div class="menu">
+<ul>
+<li><a href="Index.html">Главная</a></li>
+<li><a href="Reservations.html">Бронирование</a></li> 
+<li><a href="Info.html">Информация</a></li>
+<li><a href="Contacts.html">Связь</a></li>
+</ul>
+</div>
+<div class="main">
+<br>
+<div id="logo">
+<center><img src="img/logo.png" width="180" height="174"></center>
+</div>
+<div class="step">
+
+</div>
+		<div id='adminBar'>
+			<button onclick='changeAdminPanel(this.id)' id='add_bus'>Добавить автобус</button>
+			<button onclick='changeAdminPanel(this.id)' id='add_city'>Добавить город</button>
+			<button onclick='changeAdminPanel(this.id)' id='add_station'>Добавить вокзал</button>
+			<button onclick='changeAdminPanel(this.id)' id='add_route'>Добавить маршрут</button>
+			<button onclick='changeAdminPanel(this.id)' id='add_trip'>Добавить рейс</button>
+		</div>
+		<div id='adminContent'>
+			
+		</div>
+		
+</div>
+<div class="footer">
+<p>Сайт 2015 (С)</p>
+</div>
+</body>
+<form action='comicat.com.ua/manager' id='new_bus' class='adminAdd'>
+	<input type='text' placeholder="Автобус">
+	<input type='text' placeholder='Количество мест'><br>
+	<br>
+	<input type='submit' value='Добавить' onClick='changeAdminPanel()'>
+</form>
+<form action='comicat.com.ua/manager' id='new_city' class='adminAdd'>
+	
+	<input type='text' placeholder='Город'>
+	
+	<input type='submit' value='Добавить'>
+</form>
+<form action='comicat.com.ua/manager' id='new_station' class='adminAdd'>
+	
+	<input type='text' placeholder='Название вокзала'>
+	<input type='text' placeholder='Город'>
+
+	<input type='submit' value='Добавить' >
+</form>
+<form action='comicat.com.ua/manager' id='new_route' class='adminAdd'>
+	
+	<input type='text' placeholder='Откуда'>
+	<input type='text' placeholder='Куда'>
+	<br>
+	<input type='submit' value='Добавить'>
+</form>
+<form action='comicat.com.ua/manager' id='new_trip' class='adminAdd'>
+	
+	<input type='text' placeholder='Маршрут'>
+	<input type='datetime-local'>
+	<input type='datetime-local'>
+	<input type='text' placeholder='Автобус'>
+	<br>
+	<input type='submit' value='Добавить'>
+</form>
+</html>
+

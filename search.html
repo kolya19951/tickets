@@ -1,0 +1,77 @@
+<html>
+	<head>
+		<meta charset='utf-8'>
+		<script type='text/javascript' src='script.js'></script>
+	</head>
+	<body>
+	<form style='float: left'>
+		<table>
+			<tr>
+				<td>Фамилия</td>
+				<td>Имя</td>
+			</tr>
+			<tr>
+				<td><input type='text' id='surname'></td>
+				<td><input type='text' id='name'></td>
+			</tr>
+			<tr>
+				<td><select><option>Паспорт</option><option>Заграничный паспорт</option><option>Свидетельство о рождении</option></select></td>
+				<td><input type='text'></td>
+			</tr>
+			<tr>
+				<td>Иформация о пользователе</td>
+			</tr>
+			<tr>
+				<td>Телефон</td>
+				<td>Email</td>
+			</tr>
+			<tr>
+				<td><input type='text'></td>
+				<td><input type='email'></td>
+			</tr>
+		</table>
+		<input type='submit' onClick='createPayForm()'>
+		</form>
+		<table style='float: right'>
+			<tr>
+				<td>Информация о рейсе</td>
+			</tr>
+			<tr>
+				<td>Отправление</td>
+			</tr>
+			<tr>
+				<td>Город</td>
+			</tr>
+			<tr>
+				<td id='from_station'>Киев</td>
+			</tr>
+			<tr>
+				<td id='from_date'>18.09.2015</td>
+			</tr>
+			<tr>
+				<td>Прибытие</td>
+			</tr>
+			<tr>
+				<td>Город</td>
+			</tr>
+			<tr>
+				<td id='to_station'>Прага</td>
+			</tr>
+			<tr>
+				<td id='to_date'>19.09.2015</td>
+			</tr>
+			<tr>
+				<td id=''cost''>Стоимость</td>
+				<td>EUR</td>
+			</tr>
+		</table>
+	</body>
+	<form id="payment" name="payment" method="post" action="https://sci.interkassa.com/" enctype="utf-8">
+	<input type="hidden" name="ik_co_id" value="55f353513b1eaff4408b4567" />
+	<input type="hidden" name="ik_pm_no" value="ID_4233" />
+	<input type="hidden" name="ik_am" value="100.00" />
+	<input type="hidden" name="ik_cur" value="UAH" />
+	<input type="hidden" name="ik_desc" value="Event Description" />
+        <input type="submit" value="Pay" style='visibility: hidden'>
+</form>
+</html>
